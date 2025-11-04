@@ -1,6 +1,8 @@
+inquirer
 web3
 colorama
 eth-account
 aiohttp
 aiohttp_socks
+
 
