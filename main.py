@@ -124,10 +124,10 @@ def get_available_scripts(language):
             #{"name": "8. ", "value": "", "locked": True},
 
 
-            {"name": "9. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection", "locked": True},
-            {"name": "10. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx", "locked": True},
-            {"name": "11. Deploy Token smart-contract", "value": "deploytoken", "locked": True},
-            {"name": "12. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken", "locked": True},
+            {"name": "9. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
+            {"name": "10. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
+            {"name": "11. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "12. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
             
@@ -143,10 +143,10 @@ def get_available_scripts(language):
             
             #{"name": "8. ", "value": ""},
 
-            {"name": "9. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection", "locked": True},
-            {"name": "10. Send Random TX or File (address.txt)", "value": "sendtx", "locked": True},
-            {"name": "11. Deploy Token smart-contract", "value": "deploytoken", "locked": True},
-            {"name": "12. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken", "locked": True},
+            {"name": "9. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
+            {"name": "10. Send Random TX or File (address.txt)", "value": "sendtx"},
+            {"name": "11. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "12. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
         ]
@@ -259,3 +259,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
