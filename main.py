@@ -89,6 +89,34 @@ async def run_domain(language: str):
 async def run_mintzkcodex(language: str):
     from scripts.mintzkcodex import run_mintzkcodex as mintzkcodex_run
     await mintzkcodex_run(language)
+
+async def run_mintzkcodex(language: str):
+    from scripts.mintzkcodex import run_mintzkcodex as mintzkcodex_run
+    await mintzkcodex_run(language)
+
+async def run_caset(language: str):
+    from scripts.caset import run_caset as caset_run
+    await caset_run(language)
+
+async def run_oku(language: str):
+    from scripts.oku import run_oku as oku_run
+    await oku_run(language)
+
+async def run_mintaura(language: str):
+    from scripts.mintaura import run_mintaura as mintaura_run
+    await mintaura_run(language)
+
+async def run_alze(language: str):
+    from scripts.alze import run_alze as alze_run
+    await alze_run(language)
+
+async def run_morkie(language: str):
+    from scripts.morkie import run_alze as morkie_run
+    await morkie_run(language)
+
+async def run_draze(language: str):
+    from scripts.draze import run_draze as draze_run
+    await draze_run(language)
     
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -107,6 +135,12 @@ SCRIPT_MAP = {
     "conftnft": run_conftnft,
     "domain": run_domain,
     "mintzkcodex": run_mintzkcodex,
+    "caset": run_caset,
+    "oku": run_oku,
+    "mintaura": run_mintaura,
+    "alze": run_alze,
+    "morkie": run_morkie,
+    "draze": run_draze,
     "exit": cmd_exit
 }
 
@@ -120,14 +154,17 @@ def get_available_scripts(language):
             {"name": "5. Mint NFT Community Member of Arc → CoNFT", "value": "conftnft", "locked": True},
             {"name": "6. Mint Domain  → CoNFT", "value": "domain", "locked": True},
             {"name": "7. Mint NFT zkCodex Memorial Collection  → zkCodex", "value": "mintzkcodex", "locked": True},
+            {"name": "8. Mint NFT Collection  → Caset", "value": "caset", "locked": True},
+            {"name": "9. Mint NFT Collection  → OKUXYZ", "value": "oku", "locked": True},
+            {"name": "10. Mint NFT Collection  → MintAura", "value": "mintaura", "locked": True},
+            {"name": "11. Mint NFT Collection → 0xAlze", "value": "alze", "locked": True},
+            {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
+            {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
             
-            #{"name": "8. ", "value": "", "locked": True},
-
-
-            {"name": "9. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
-            {"name": "10. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
-            {"name": "11. Deploy Token smart-contract", "value": "deploytoken"},
-            {"name": "12. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
+            {"name": "14. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
+            {"name": "15. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
+            {"name": "16. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "17. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
             
@@ -140,13 +177,17 @@ def get_available_scripts(language):
             {"name": "5. Mint NFT Community Member of Arc → CoNFT", "value": "conftnft", "locked": True},
             {"name": "6. Mint Domain  → CoNFT", "value": "domain", "locked": True},
             {"name": "7. Mint NFT zkCodex Memorial Collection  → zkCodex", "value": "mintzkcodex", "locked": True},
-            
-            #{"name": "8. ", "value": ""},
+            {"name": "8. Mint NFT Collection  → Caset", "value": "caset", "locked": True},
+            {"name": "9. Mint NFT Collection  → OKUXYZ", "value": "oku", "locked": True},
+            {"name": "10. Mint NFT Collection  → MintAura", "value": "mintaura", "locked": True},
+            {"name": "11. Mint NFT Collection → 0xAlze", "value": "alze", "locked": True},
+            {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
+            {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
 
-            {"name": "9. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
-            {"name": "10. Send Random TX or File (address.txt)", "value": "sendtx"},
-            {"name": "11. Deploy Token smart-contract", "value": "deploytoken"},
-            {"name": "12. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
+            {"name": "14. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
+            {"name": "15. Send Random TX or File (address.txt)", "value": "sendtx"},
+            {"name": "16. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "17. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
         ]
@@ -259,4 +300,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
