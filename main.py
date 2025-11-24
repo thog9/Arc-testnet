@@ -117,6 +117,10 @@ async def run_morkie(language: str):
 async def run_draze(language: str):
     from scripts.draze import run_draze as draze_run
     await draze_run(language)
+
+async def run_znsdomain(language: str):
+    from scripts.znsdomain import run_znsdomain as znsdomain_run
+    await znsdomain_run(language)
     
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -141,6 +145,7 @@ SCRIPT_MAP = {
     "alze": run_alze,
     "morkie": run_morkie,
     "draze": run_draze,
+    "znsdomain": run_znsdomain,
     "exit": cmd_exit
 }
 
@@ -160,6 +165,8 @@ def get_available_scripts(language):
             {"name": "11. Mint NFT Collection → 0xAlze", "value": "alze", "locked": True},
             {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
+
+            {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
             
             {"name": "14. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
             {"name": "15. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
@@ -184,6 +191,8 @@ def get_available_scripts(language):
             {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
 
+            {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
+            
             {"name": "14. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
             {"name": "15. Send Random TX or File (address.txt)", "value": "sendtx"},
             {"name": "16. Deploy Token smart-contract", "value": "deploytoken"},
@@ -300,5 +309,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
