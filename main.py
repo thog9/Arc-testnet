@@ -125,6 +125,10 @@ async def run_znsdomain(language: str):
 async def run_infinitydomain(language: str):
     from scripts.infinitydomain import run_infinitydomain as infinitydomain_run
     await infinitydomain_run(language)
+
+async def run_superbridge(language: str):
+    from scripts.superbridge import run_superbridge as superbridge_run
+    await superbridge_run(language)
     
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -151,6 +155,7 @@ SCRIPT_MAP = {
     "draze": run_draze,
     "znsdomain": run_znsdomain,
     "infinitydomain": run_infinitydomain,
+    "superbridge": run_superbridge,
     "exit": cmd_exit
 }
 
@@ -170,15 +175,15 @@ def get_available_scripts(language):
             {"name": "11. Mint NFT Collection → 0xAlze", "value": "alze", "locked": True},
             {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
-
             {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
             {"name": "15. Mint Domain  → Infinityname", "value": "infinitydomain", "locked": True},
-            
             {"name": "16. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
             {"name": "17. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
             {"name": "18. Deploy Token smart-contract", "value": "deploytoken"},
             {"name": "19. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
 
+            {"name": "20. Bridge USDC (ARC → Sepolia) → Superbridge", "value": "superbridge", "locked": True},
+            
             {"name": "X. Exit", "value": "exit"},
             
         ],
@@ -196,14 +201,14 @@ def get_available_scripts(language):
             {"name": "11. Mint NFT Collection → 0xAlze", "value": "alze", "locked": True},
             {"name": "12. Mint NFT Collection  → Morkie", "value": "morkie", "locked": True},
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
-
             {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
             {"name": "15. Mint Domain  → Infinityname", "value": "infinitydomain", "locked": True},
-            
             {"name": "16. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
             {"name": "17. Send Random TX or File (address.txt)", "value": "sendtx"},
             {"name": "18. Deploy Token smart-contract", "value": "deploytoken"},
             {"name": "19. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
+
+            {"name": "20. Bridge USDC (ARC → Sepolia) → Superbridge", "value": "superbridge", "locked": True},
 
             {"name": "X. Exit", "value": "exit"},
         ]
@@ -316,6 +321,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
