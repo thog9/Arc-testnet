@@ -129,6 +129,18 @@ async def run_infinitydomain(language: str):
 async def run_superbridge(language: str):
     from scripts.superbridge import run_superbridge as superbridge_run
     await superbridge_run(language)
+
+async def run_arcflow(language: str):
+    from scripts.arcflow import run_arcflow as arcflow_run
+    await arcflow_run(language)
+
+async def run_wraparcflow(language: str):
+    from scripts.wraparcflow import run_wraparcflow as wraparcflow_run
+    await wraparcflow_run(language)
+
+async def run_wrapsynthra(language: str):
+    from scripts.wrapsynthra import run_wrapsynthra as wrapsynthra_run
+    await wrapsynthra_run(language)
     
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -156,6 +168,9 @@ SCRIPT_MAP = {
     "znsdomain": run_znsdomain,
     "infinitydomain": run_infinitydomain,
     "superbridge": run_superbridge,
+    "arcflow": run_arcflow,
+    "wrapsynthra": run_wrapsynthra,
+    "wraparcflow": run_wraparcflow,
     "exit": cmd_exit
 }
 
@@ -183,6 +198,9 @@ def get_available_scripts(language):
             {"name": "19. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "20. Bridge USDC (ARC → Sepolia) → Superbridge", "value": "superbridge", "locked": True},
+            {"name": "21. Mint Genesis Pass NFT → ArcFlow Finance", "value": "arcflow", "locked": True},
+            {"name": "22. Wrap/UnWrap USDC | WUSDC → Synthra", "value": "wrapsynthra", "locked": True},
+            {"name": "23. Wrap/UnWrap USDC | WUSDC → ArcFlow Finance", "value": "wraparcflow", "locked": True},
             
             {"name": "X. Exit", "value": "exit"},
             
@@ -209,6 +227,9 @@ def get_available_scripts(language):
             {"name": "19. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "20. Bridge USDC (ARC → Sepolia) → Superbridge", "value": "superbridge", "locked": True},
+            {"name": "21. Mint Genesis Pass NFT → ArcFlow Finance", "value": "arcflow", "locked": True},
+            {"name": "22. Wrap/UnWrap USDC | WUSDC → Synthra", "value": "wrapsynthra", "locked": True},
+            {"name": "23. Wrap/UnWrap USDC | WUSDC → ArcFlow Finance", "value": "wraparcflow", "locked": True},
 
             {"name": "X. Exit", "value": "exit"},
         ]
@@ -321,6 +342,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
