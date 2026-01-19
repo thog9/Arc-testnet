@@ -172,11 +172,12 @@ def get_available_scripts(language):
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
 
             {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
+            {"name": "15. Mint Domain  → Infinityname", "value": "infinitydomain", "locked": True},
             
-            {"name": "15. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
-            {"name": "16. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
-            {"name": "17. Deploy Token smart-contract", "value": "deploytoken"},
-            {"name": "18. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
+            {"name": "16. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ]", "value": "nftcollection"},
+            {"name": "17. Send TX ngẫu nhiên hoặc File (address.txt)", "value": "sendtx"},
+            {"name": "18. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "19. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
             
@@ -197,11 +198,12 @@ def get_available_scripts(language):
             {"name": "13. Mint NFT Collection  → DrazeLab", "value": "draze", "locked": True},
 
             {"name": "14. Mint Domain  → ZNS", "value": "znsdomain", "locked": True},
+            {"name": "15. Mint Domain  → Infinityname", "value": "infinitydomain", "locked": True},
             
-            {"name": "15. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
-            {"name": "16. Send Random TX or File (address.txt)", "value": "sendtx"},
-            {"name": "17. Deploy Token smart-contract", "value": "deploytoken"},
-            {"name": "18. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
+            {"name": "16. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ]", "value": "nftcollection"},
+            {"name": "17. Send Random TX or File (address.txt)", "value": "sendtx"},
+            {"name": "18. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "19. Send Token ERC20 Random or File (addressERC20.txt)", "value": "sendtoken"},
 
             {"name": "X. Exit", "value": "exit"},
         ]
@@ -314,6 +316,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
