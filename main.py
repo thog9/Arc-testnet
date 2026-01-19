@@ -121,6 +121,10 @@ async def run_draze(language: str):
 async def run_znsdomain(language: str):
     from scripts.znsdomain import run_znsdomain as znsdomain_run
     await znsdomain_run(language)
+
+async def run_infinitydomain(language: str):
+    from scripts.infinitydomain import run_infinitydomain as infinitydomain_run
+    await infinitydomain_run(language)
     
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -146,6 +150,7 @@ SCRIPT_MAP = {
     "morkie": run_morkie,
     "draze": run_draze,
     "znsdomain": run_znsdomain,
+    "infinitydomain": run_infinitydomain,
     "exit": cmd_exit
 }
 
@@ -309,6 +314,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
